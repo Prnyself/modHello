@@ -1,0 +1,12 @@
+language: go
+
+sudo: false
+
+go:
+  - "1.12"
+
+env: GO111MODULE=on
+
+script:
+  - ./.travis.gofmt.sh
+  - go test -v -race *.go
